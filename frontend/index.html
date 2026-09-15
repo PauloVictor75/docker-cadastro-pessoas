@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Pessoas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Cadastro de Pessoa</h1>
+
+    <div id="mensagem" class="mensagem" hidden></div>
+
+    <form id="form-cadastro">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf" name="cpf" required />
+
+      <label for="cep">CEP</label>
+      <div class="linha-cep">
+        <input type="text" id="cep" name="cep" placeholder="00000-000" required />
+        <button type="button" id="btn-buscar-cep">Buscar CEP</button>
+      </div>
+
+      <label for="logradouro">Logradouro</label>
+      <input type="text" id="logradouro" name="logradouro" />
+
+      <label for="bairro">Bairro</label>
+      <input type="text" id="bairro" name="bairro" />
+
+      <label for="localidade">Localidade</label>
+      <input type="text" id="localidade" name="localidade" />
+
+      <label for="uf">UF</label>
+      <input type="text" id="uf" name="uf" maxlength="2" />
+
+      <label for="numero">Número</label>
+      <input type="text" id="numero" name="numero" required />
+
+      <label for="complemento">Complemento</label>
+      <input type="text" id="complemento" name="complemento" />
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <section>
+      <h2>Pessoas cadastradas</h2>
+      <table id="tabela-pessoas">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Cidade</th>
+            <th>UF</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-pessoas-corpo"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
