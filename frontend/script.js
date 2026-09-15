@@ -119,6 +119,9 @@ async function carregarPessoas() {
       const linha = document.createElement("tr");
       linha.appendChild(criarCelula(pessoa.nome));
       linha.appendChild(criarCelula(pessoa.cpf));
+      linha.appendChild(criarCelula(pessoa.cep));
+      linha.appendChild(criarCelula(pessoa.numero));
+      linha.appendChild(criarCelula(pessoa.complemento));
       linha.appendChild(criarCelula(pessoa.localidade));
       linha.appendChild(criarCelula(pessoa.uf));
       tabelaCorpo.appendChild(linha);
